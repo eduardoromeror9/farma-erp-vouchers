@@ -1,0 +1,833 @@
+{
+  "generado": "2026-09-25",
+  "motivo": "5 sedes de prueba listas para la demo del 10416 (filtro por medicamento + sede mas cercana).",
+  "como_deshacer": "Todo son registros NUEVOS. DELETE (soft) por id. Nada se modifico ni se borro de lo que existia.",
+  "sedes_nuevas": [
+    {
+      "nombre": "Sede Prueba Nunoa",
+      "id": "6ab6ab03697c7c74b",
+      "comuna": "NUNOA",
+      "gps": "-33.4543164, -70.5936358",
+      "prestador": "PRESTADOR PRUEBA SANTIAGO"
+    },
+    {
+      "nombre": "Sede Prueba Maipu",
+      "id": "6ab6ab039990f44d9",
+      "comuna": "MAIPU",
+      "gps": "-33.5094409, -70.756182",
+      "prestador": "PRESTADOR PRUEBA SANTIAGO"
+    }
+  ],
+  "csucursalprestacion_creados_hoy": 189,
+  "detalle_por_sede": {
+    "Sede Prueba Maipu": [
+      {
+        "id": "6ab6ab3380abbd068",
+        "producto": "TP+INR"
+      },
+      {
+        "id": "6ab6ab33674a517b5",
+        "producto": "Tiempo parcial de tromboplastina activado (TTPa)"
+      },
+      {
+        "id": "6ab6ab334df9f4bbf",
+        "producto": "Seguimiento por parte del neuropediatra"
+      },
+      {
+        "id": "6ab6ab333411f3ffc",
+        "producto": "Rehabilitación kinesiológica"
+      },
+      {
+        "id": "6ab6ab331a5e02f2d",
+        "producto": "Rehabilitación broncopulmonar"
+      },
+      {
+        "id": "6ab6ab32f291254bc",
+        "producto": "Pruebas Hepáticas"
+      },
+      {
+        "id": "6ab6ab32d8319e7c8",
+        "producto": "Proteinuria aislada (orina)"
+      },
+      {
+        "id": "6ab6ab32be5ebb5bf",
+        "producto": "Proteínas Totales (Albuminas-Globulinas)"
+      },
+      {
+        "id": "6ab6ab32a490e4b9e",
+        "producto": "Nivel de troponina (Troponina I o Troponina T)"
+      },
+      {
+        "id": "6ab6ab328a4b0d904",
+        "producto": "Hemograma Completo"
+      },
+      {
+        "id": "6ab6ab3270df5eed4",
+        "producto": "GPT (ALT)"
+      },
+      {
+        "id": "6ab6ab3256f7a42a8",
+        "producto": "GGT"
+      },
+      {
+        "id": "6ab6ab323d84f4e40",
+        "producto": "ESTUDIO DIAGNOSTICO - rearreglos de los genes SMN1 y SMN2"
+      },
+      {
+        "id": "6ab6ab322454a5997",
+        "producto": "Enfermera 24/7"
+      },
+      {
+        "id": "6ab6ab32080710d0e",
+        "producto": "Determinación a domicilio del peso del bebé con balanza pediátrica"
+      },
+      {
+        "id": "6ab6ab31dfeac7ccb",
+        "producto": "Creatinina cinasa (CK)"
+      },
+      {
+        "id": "6ab6ab31c64849242",
+        "producto": "Bilirrubina total"
+      },
+      {
+        "id": "6ab6ab31acec8d91a",
+        "producto": "Apoyo psicológico"
+      },
+      {
+        "id": "6ab6ab319335fe953",
+        "producto": "Anticuerpos anti-AAV9"
+      },
+      {
+        "id": "6ab6ab3179428eb22",
+        "producto": "Traslocación BCR/ABL"
+      },
+      {
+        "id": "6ab6ab315f94d8caa",
+        "producto": "Mutación ABL T315I el LMC (Sangre o Médula Osea)"
+      },
+      {
+        "id": "6ab6ab3145aa7a9fe",
+        "producto": "Tomografía Axial Computarizada (TAC) simple"
+      },
+      {
+        "id": "6ab6ab312c50a5370",
+        "producto": "Perfil hepático + GGTP"
+      },
+      {
+        "id": "6ab6ab3112490a8b6",
+        "producto": "Perfil bioquímico"
+      },
+      {
+        "id": "6ab6ab30ecbc30f14",
+        "producto": "Gammagrafia Ósea y SPECT CT Localizado"
+      },
+      {
+        "id": "6ab6ab30d36e3b046",
+        "producto": "Electrolitos plasmáticos"
+      },
+      {
+        "id": "6ab6ab30ba1610941",
+        "producto": "Electrocardiograma"
+      },
+      {
+        "id": "6ab6ab309ead10cc0",
+        "producto": "VDRL"
+      },
+      {
+        "id": "6ab6ab3083fb6c9f0",
+        "producto": "Varicela Zoster (IgG)"
+      },
+      {
+        "id": "6ab6ab3069065b58e",
+        "producto": "Vacuna varicela"
+      },
+      {
+        "id": "6ab6ab304f2f6ad2f",
+        "producto": "Urocultivo"
+      },
+      {
+        "id": "6ab6ab3035c133593",
+        "producto": "TSH"
+      },
+      {
+        "id": "6ab6ab301bedbc66d",
+        "producto": "Test de anticuerpos para hepatitis C"
+      },
+      {
+        "id": "6ab6ab30015cae458",
+        "producto": "RMN médula espinal completa (casos excepcionales)"
+      },
+      {
+        "id": "6ab6ab2fdc1c2a7d3",
+        "producto": "RM de Cerebro Con Contraste"
+      },
+      {
+        "id": "6ab6ab2fc20e8692a",
+        "producto": "RM Columna Dorsal"
+      },
+      {
+        "id": "6ab6ab2fa7368d1e6",
+        "producto": "Prueba de embarazo"
+      },
+      {
+        "id": "6ab6ab2f8d4e7a169",
+        "producto": "Orina completa"
+      },
+      {
+        "id": "6ab6ab2f73676142e",
+        "producto": "Inmunoglobulina M"
+      },
+      {
+        "id": "6ab6ab2f58fcbc2d6",
+        "producto": "Inmunoglobulina G"
+      },
+      {
+        "id": "6ab6ab2f3fb047cec",
+        "producto": "Creatinina"
+      },
+      {
+        "id": "6ab6ab2f269c29654",
+        "producto": "VIH 1+2"
+      },
+      {
+        "id": "6ab6ab2f0d1df927c",
+        "producto": "VHC"
+      },
+      {
+        "id": "6ab6ab2ee63cd51e4",
+        "producto": "Vacuna Hepatitis B"
+      },
+      {
+        "id": "6ab6ab2ecc47d81ec",
+        "producto": "Vacuna contra la influenza (casos excepcionales)"
+      },
+      {
+        "id": "6ab6ab2eb266e3520",
+        "producto": "Vacuna Antineumocócica"
+      },
+      {
+        "id": "6ab6ab2e9833b5453",
+        "producto": "RX pelvis"
+      },
+      {
+        "id": "6ab6ab2e62644bb82",
+        "producto": "RESONANCIA MAGNETICA SACROILÍACA"
+      },
+      {
+        "id": "6ab6ab2e486c8834a",
+        "producto": "Radiografía simple de Torax Ap y L"
+      },
+      {
+        "id": "6ab6ab2e2dc288daf",
+        "producto": "Radiografía de manos (casos excepcionales)"
+      },
+      {
+        "id": "6ab6ab2e138f4e46b",
+        "producto": "Quantiferon"
+      },
+      {
+        "id": "6ab6ab2deda627106",
+        "producto": "Hemograma"
+      },
+      {
+        "id": "6ab6ab2dd33d6ffe9",
+        "producto": "Antígeno de Superficie (HBsAG)"
+      },
+      {
+        "id": "6ab6ab2db97d3e9fd",
+        "producto": "Anticore Total"
+      }
+    ],
+    "Sede Prueba Nunoa": [
+      {
+        "id": "6ab6ab2d89e0ff54b",
+        "producto": "TP+INR"
+      },
+      {
+        "id": "6ab6ab2d6eb096f4c",
+        "producto": "Tiempo parcial de tromboplastina activado (TTPa)"
+      },
+      {
+        "id": "6ab6ab2d5573ea49a",
+        "producto": "Seguimiento por parte del neuropediatra"
+      },
+      {
+        "id": "6ab6ab2d3b30f2f64",
+        "producto": "Rehabilitación kinesiológica"
+      },
+      {
+        "id": "6ab6ab2d2153b4b55",
+        "producto": "Rehabilitación broncopulmonar"
+      },
+      {
+        "id": "6ab6ab2d0733c7ab4",
+        "producto": "Pruebas Hepáticas"
+      },
+      {
+        "id": "6ab6ab2ce162e3fb8",
+        "producto": "Proteinuria aislada (orina)"
+      },
+      {
+        "id": "6ab6ab2cc7a542242",
+        "producto": "Proteínas Totales (Albuminas-Globulinas)"
+      },
+      {
+        "id": "6ab6ab2cad380158e",
+        "producto": "Nivel de troponina (Troponina I o Troponina T)"
+      },
+      {
+        "id": "6ab6ab2c92bb9ea34",
+        "producto": "Hemograma Completo"
+      },
+      {
+        "id": "6ab6ab2c78249f7b4",
+        "producto": "GPT (ALT)"
+      },
+      {
+        "id": "6ab6ab2c5c950fea1",
+        "producto": "GGT"
+      },
+      {
+        "id": "6ab6ab2c4267b1d63",
+        "producto": "ESTUDIO DIAGNOSTICO - rearreglos de los genes SMN1 y SMN2"
+      },
+      {
+        "id": "6ab6ab2c28fac2f31",
+        "producto": "Enfermera 24/7"
+      },
+      {
+        "id": "6ab6ab2c0e645a0c8",
+        "producto": "Determinación a domicilio del peso del bebé con balanza pediátrica"
+      },
+      {
+        "id": "6ab6ab2be8d4590d6",
+        "producto": "Creatinina cinasa (CK)"
+      },
+      {
+        "id": "6ab6ab2bcf2e57aa3",
+        "producto": "Bilirrubina total"
+      },
+      {
+        "id": "6ab6ab2bb4c07d725",
+        "producto": "Apoyo psicológico"
+      },
+      {
+        "id": "6ab6ab2b9ace5a637",
+        "producto": "Anticuerpos anti-AAV9"
+      },
+      {
+        "id": "6ab6ab2b80f7c17f5",
+        "producto": "Traslocación BCR/ABL"
+      },
+      {
+        "id": "6ab6ab2b67332328d",
+        "producto": "Mutación ABL T315I el LMC (Sangre o Médula Osea)"
+      },
+      {
+        "id": "6ab6ab2b4d603556f",
+        "producto": "Tomografía Axial Computarizada (TAC) simple"
+      },
+      {
+        "id": "6ab6ab2b32fe1da02",
+        "producto": "Perfil hepático + GGTP"
+      },
+      {
+        "id": "6ab6ab2b16401a6ea",
+        "producto": "Perfil bioquímico"
+      },
+      {
+        "id": "6ab6ab2aef3ec478e",
+        "producto": "Gammagrafia Ósea y SPECT CT Localizado"
+      },
+      {
+        "id": "6ab6ab2ad593744c9",
+        "producto": "Electrolitos plasmáticos"
+      },
+      {
+        "id": "6ab6ab2abbf480dca",
+        "producto": "Electrocardiograma"
+      },
+      {
+        "id": "6ab6ab2aa279dd545",
+        "producto": "VDRL"
+      },
+      {
+        "id": "6ab6ab2a889b198e6",
+        "producto": "Varicela Zoster (IgG)"
+      },
+      {
+        "id": "6ab6ab2a6eb8be58e",
+        "producto": "Vacuna varicela"
+      },
+      {
+        "id": "6ab6ab2a553436863",
+        "producto": "Urocultivo"
+      },
+      {
+        "id": "6ab6ab2a3b8488299",
+        "producto": "TSH"
+      },
+      {
+        "id": "6ab6ab2a218cf5fd8",
+        "producto": "Test de anticuerpos para hepatitis C"
+      },
+      {
+        "id": "6ab6ab2a07ce7eb63",
+        "producto": "RMN médula espinal completa (casos excepcionales)"
+      },
+      {
+        "id": "6ab6ab29e2440293c",
+        "producto": "RM de Cerebro Con Contraste"
+      },
+      {
+        "id": "6ab6ab29c8c2981f8",
+        "producto": "RM Columna Dorsal"
+      },
+      {
+        "id": "6ab6ab29af8a8150d",
+        "producto": "Prueba de embarazo"
+      },
+      {
+        "id": "6ab6ab2994f8d09e3",
+        "producto": "Orina completa"
+      },
+      {
+        "id": "6ab6ab297b3ed735e",
+        "producto": "Inmunoglobulina M"
+      },
+      {
+        "id": "6ab6ab296201cc327",
+        "producto": "Inmunoglobulina G"
+      },
+      {
+        "id": "6ab6ab29485dd375e",
+        "producto": "Creatinina"
+      },
+      {
+        "id": "6ab6ab292e28d62c5",
+        "producto": "VIH 1+2"
+      },
+      {
+        "id": "6ab6ab29136601b63",
+        "producto": "VHC"
+      },
+      {
+        "id": "6ab6ab28edb770a6c",
+        "producto": "Vacuna Hepatitis B"
+      },
+      {
+        "id": "6ab6ab28d33700e9d",
+        "producto": "Vacuna contra la influenza (casos excepcionales)"
+      },
+      {
+        "id": "6ab6ab28b9a90376f",
+        "producto": "Vacuna Antineumocócica"
+      },
+      {
+        "id": "6ab6ab289f0562217",
+        "producto": "RX pelvis"
+      },
+      {
+        "id": "6ab6ab28852b49224",
+        "producto": "RESONANCIA MAGNETICA SACROILÍACA"
+      },
+      {
+        "id": "6ab6ab286bf775ffb",
+        "producto": "Radiografía simple de Torax Ap y L"
+      },
+      {
+        "id": "6ab6ab28510764443",
+        "producto": "Radiografía de manos (casos excepcionales)"
+      },
+      {
+        "id": "6ab6ab2837266107a",
+        "producto": "Quantiferon"
+      },
+      {
+        "id": "6ab6ab281daca2f98",
+        "producto": "Hemograma"
+      },
+      {
+        "id": "6ab6ab28046e05b94",
+        "producto": "Antígeno de Superficie (HBsAG)"
+      },
+      {
+        "id": "6ab6ab27dd8311e29",
+        "producto": "Anticore Total"
+      }
+    ],
+    "Sede Prueba Melipilla": [
+      {
+        "id": "6ab6ab27ab9f10666",
+        "producto": "Tiempo parcial de tromboplastina activado (TTPa)"
+      },
+      {
+        "id": "6ab6ab278820ee5d9",
+        "producto": "Seguimiento por parte del neuropediatra"
+      },
+      {
+        "id": "6ab6ab2754693d9f4",
+        "producto": "Rehabilitación kinesiológica"
+      },
+      {
+        "id": "6ab6ab2724b3be698",
+        "producto": "Rehabilitación broncopulmonar"
+      },
+      {
+        "id": "6ab6ab26e361023aa",
+        "producto": "Proteinuria aislada (orina)"
+      },
+      {
+        "id": "6ab6ab26b3e57f613",
+        "producto": "Nivel de troponina (Troponina I o Troponina T)"
+      },
+      {
+        "id": "6ab6ab26814bc3a90",
+        "producto": "Enfermera 24/7"
+      },
+      {
+        "id": "6ab6ab265274ebd63",
+        "producto": "Determinación a domicilio del peso del bebé con balanza pediátrica"
+      },
+      {
+        "id": "6ab6ab261e62c0666",
+        "producto": "Creatinina cinasa (CK)"
+      },
+      {
+        "id": "6ab6ab25e093ab28e",
+        "producto": "Apoyo psicológico"
+      },
+      {
+        "id": "6ab6ab25b4ae34084",
+        "producto": "Anticuerpos anti-AAV9"
+      },
+      {
+        "id": "6ab6ab25947866106",
+        "producto": "Perfil bioquímico"
+      },
+      {
+        "id": "6ab6ab257442988df",
+        "producto": "Electrolitos plasmáticos"
+      },
+      {
+        "id": "6ab6ab2545118007b",
+        "producto": "VDRL"
+      },
+      {
+        "id": "6ab6ab252314652b4",
+        "producto": "Varicela Zoster (IgG)"
+      },
+      {
+        "id": "6ab6ab2508182e75e",
+        "producto": "Vacuna varicela"
+      },
+      {
+        "id": "6ab6ab24e2ccea004",
+        "producto": "Urocultivo"
+      },
+      {
+        "id": "6ab6ab24c81d8d7e7",
+        "producto": "TSH"
+      },
+      {
+        "id": "6ab6ab24ae5f171f7",
+        "producto": "Test de anticuerpos para hepatitis C"
+      },
+      {
+        "id": "6ab6ab24951c924a4",
+        "producto": "RMN médula espinal completa (casos excepcionales)"
+      },
+      {
+        "id": "6ab6ab247baf99405",
+        "producto": "Orina completa"
+      },
+      {
+        "id": "6ab6ab2462497ce65",
+        "producto": "VHC"
+      },
+      {
+        "id": "6ab6ab2449077c90b",
+        "producto": "Vacuna Hepatitis B"
+      },
+      {
+        "id": "6ab6ab242f2a9d454",
+        "producto": "Vacuna contra la influenza (casos excepcionales)"
+      },
+      {
+        "id": "6ab6ab241583a1e8c",
+        "producto": "Vacuna Antineumocócica"
+      },
+      {
+        "id": "6ab6ab23ef784d42c",
+        "producto": "RX pelvis"
+      },
+      {
+        "id": "6ab6ab23d611a3df2",
+        "producto": "Radiografía de manos (casos excepcionales)"
+      }
+    ],
+    "Sede Prueba Las Condes": [
+      {
+        "id": "6ab6ab23979d0e04f",
+        "producto": "Tiempo parcial de tromboplastina activado (TTPa)"
+      },
+      {
+        "id": "6ab6ab237e4b5e86d",
+        "producto": "Seguimiento por parte del neuropediatra"
+      },
+      {
+        "id": "6ab6ab23641efa1c1",
+        "producto": "Rehabilitación kinesiológica"
+      },
+      {
+        "id": "6ab6ab234a716a517",
+        "producto": "Rehabilitación broncopulmonar"
+      },
+      {
+        "id": "6ab6ab23312ba7b7b",
+        "producto": "Proteinuria aislada (orina)"
+      },
+      {
+        "id": "6ab6ab2317c78d297",
+        "producto": "Nivel de troponina (Troponina I o Troponina T)"
+      },
+      {
+        "id": "6ab6ab22f1f2fc8d3",
+        "producto": "Enfermera 24/7"
+      },
+      {
+        "id": "6ab6ab22d93910e51",
+        "producto": "Determinación a domicilio del peso del bebé con balanza pediátrica"
+      },
+      {
+        "id": "6ab6ab22c031beef0",
+        "producto": "Creatinina cinasa (CK)"
+      },
+      {
+        "id": "6ab6ab22a6aa08b64",
+        "producto": "Apoyo psicológico"
+      },
+      {
+        "id": "6ab6ab2271a397f01",
+        "producto": "Anticuerpos anti-AAV9"
+      },
+      {
+        "id": "6ab6ab225801fd8ee",
+        "producto": "Perfil bioquímico"
+      },
+      {
+        "id": "6ab6ab223eb28284f",
+        "producto": "Electrolitos plasmáticos"
+      },
+      {
+        "id": "6ab6ab222557941d6",
+        "producto": "VDRL"
+      },
+      {
+        "id": "6ab6ab220be4502f7",
+        "producto": "Varicela Zoster (IgG)"
+      },
+      {
+        "id": "6ab6ab21e6affe0a4",
+        "producto": "Vacuna varicela"
+      },
+      {
+        "id": "6ab6ab21cceae2e7e",
+        "producto": "Urocultivo"
+      },
+      {
+        "id": "6ab6ab21b29966df1",
+        "producto": "TSH"
+      },
+      {
+        "id": "6ab6ab219963e570e",
+        "producto": "Test de anticuerpos para hepatitis C"
+      },
+      {
+        "id": "6ab6ab217fdc1c9ad",
+        "producto": "RMN médula espinal completa (casos excepcionales)"
+      },
+      {
+        "id": "6ab6ab2166f8583e4",
+        "producto": "Orina completa"
+      },
+      {
+        "id": "6ab6ab214dbdc575d",
+        "producto": "VHC"
+      },
+      {
+        "id": "6ab6ab213449bc43c",
+        "producto": "Vacuna Hepatitis B"
+      },
+      {
+        "id": "6ab6ab211af75653d",
+        "producto": "Vacuna contra la influenza (casos excepcionales)"
+      },
+      {
+        "id": "6ab6ab21010bc9b17",
+        "producto": "Vacuna Antineumocócica"
+      },
+      {
+        "id": "6ab6ab20dbb2ba4c0",
+        "producto": "RX pelvis"
+      },
+      {
+        "id": "6ab6ab20c1ec3f74a",
+        "producto": "Radiografía de manos (casos excepcionales)"
+      }
+    ],
+    "Sede Prueba Santiago Centro": [
+      {
+        "id": "6ab6ab208f45bb074",
+        "producto": "Tiempo parcial de tromboplastina activado (TTPa)"
+      },
+      {
+        "id": "6ab6ab207531c9911",
+        "producto": "Seguimiento por parte del neuropediatra"
+      },
+      {
+        "id": "6ab6ab205b99a42f7",
+        "producto": "Rehabilitación kinesiológica"
+      },
+      {
+        "id": "6ab6ab204237a00c7",
+        "producto": "Rehabilitación broncopulmonar"
+      },
+      {
+        "id": "6ab6ab2028a157bb3",
+        "producto": "Proteinuria aislada (orina)"
+      },
+      {
+        "id": "6ab6ab200f250b467",
+        "producto": "Nivel de troponina (Troponina I o Troponina T)"
+      },
+      {
+        "id": "6ab6ab1fea5c87e82",
+        "producto": "Enfermera 24/7"
+      },
+      {
+        "id": "6ab6ab1fd0e77616f",
+        "producto": "Determinación a domicilio del peso del bebé con balanza pediátrica"
+      },
+      {
+        "id": "6ab6ab1fb6f4ac012",
+        "producto": "Creatinina cinasa (CK)"
+      },
+      {
+        "id": "6ab6ab1f9e1733946",
+        "producto": "Apoyo psicológico"
+      },
+      {
+        "id": "6ab6ab1f848766285",
+        "producto": "Anticuerpos anti-AAV9"
+      },
+      {
+        "id": "6ab6ab1f6b9bab111",
+        "producto": "Perfil bioquímico"
+      },
+      {
+        "id": "6ab6ab1f5228b0214",
+        "producto": "Electrolitos plasmáticos"
+      },
+      {
+        "id": "6ab6ab1f38d3e3120",
+        "producto": "VDRL"
+      },
+      {
+        "id": "6ab6ab1f200e73c63",
+        "producto": "Varicela Zoster (IgG)"
+      },
+      {
+        "id": "6ab6ab1f06c8dc395",
+        "producto": "Vacuna varicela"
+      },
+      {
+        "id": "6ab6ab1ee02043d01",
+        "producto": "Urocultivo"
+      },
+      {
+        "id": "6ab6ab1ec68f2ac6a",
+        "producto": "TSH"
+      },
+      {
+        "id": "6ab6ab1eac191d781",
+        "producto": "Test de anticuerpos para hepatitis C"
+      },
+      {
+        "id": "6ab6ab1e921fe9d36",
+        "producto": "RMN médula espinal completa (casos excepcionales)"
+      },
+      {
+        "id": "6ab6ab1e78c57b090",
+        "producto": "Orina completa"
+      },
+      {
+        "id": "6ab6ab1e5e57a30ec",
+        "producto": "VHC"
+      },
+      {
+        "id": "6ab6ab1e454e4c038",
+        "producto": "Vacuna Hepatitis B"
+      },
+      {
+        "id": "6ab6ab1e2c15fa061",
+        "producto": "Vacuna contra la influenza (casos excepcionales)"
+      },
+      {
+        "id": "6ab6ab1e12450896e",
+        "producto": "Vacuna Antineumocócica"
+      },
+      {
+        "id": "6ab6ab1decb4fcb7e",
+        "producto": "RX pelvis"
+      },
+      {
+        "id": "6ab6ab1dd25ed5b8c",
+        "producto": "Radiografía de manos (casos excepcionales)"
+      }
+    ]
+  },
+  "pacientes_comuna_asignada": [
+    {
+      "id": "6ab572f5633f14cc8",
+      "codigo": "KES-PF1",
+      "comuna_antes": null,
+      "comuna_despues": "SANTIAGO",
+      "modificado": true
+    },
+    {
+      "id": "69d90d166b9b53db6",
+      "codigo": "KES-PAC",
+      "comuna_antes": null,
+      "comuna_despues": "LAS CONDES",
+      "modificado": true
+    },
+    {
+      "id": "69d90ef2ce8980cec",
+      "codigo": "(sin codigo)",
+      "comuna_antes": null,
+      "comuna_despues": "MAIPU",
+      "modificado": true
+    }
+  ],
+  "nota_pacientes": "Solo se toco el campo comunaId de estos 3 registros, que estaba vacio. Para deshacer: dejarlos en null.",
+  "pacientes_producto_apuntado_al_diccionario": [
+    {
+      "id": "69d90d166b9b53db6",
+      "codigo": "KES-PAC1",
+      "producto_antes": "Kesimpta PAP-AF (Ofatumumab) SC.",
+      "producto_antes_id": "694eadf05dbd60989",
+      "producto_despues": "Kesimpta (Ofatumumab) SC",
+      "producto_despues_id": "6a9726b7dbc6ee60c"
+    },
+    {
+      "id": "69d90ef2ce8980cec",
+      "codigo": "KES-JAN1",
+      "producto_antes": "Kesimpta PAP-AF (Ofatumumab) SC.",
+      "producto_antes_id": "694eadf05dbd60989",
+      "producto_despues": "Kesimpta (Ofatumumab) SC",
+      "producto_despues_id": "6a9726b7dbc6ee60c"
+    }
+  ],
+  "nota_producto": "Existia una 2a variante de producto \"Kesimpta PAP-AF (Ofatumumab) SC.\" que NO esta en CDiccionarioPMP. Se apunto estos 2 pacientes de prueba al producto que si esta. Para deshacer: devolver producto_antes_id. HALLAZGO PENDIENTE DE DECISION: esa variante sigue sin cobertura en el diccionario."
+}

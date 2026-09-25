@@ -1,0 +1,82 @@
+{
+  "fecha": "2026-09-24T17:45:19.042395",
+  "motivo": "registros de prueba de David en CDiccionarioPMP",
+  "registros": [
+    {
+      "id": "6ab541a32b2064394",
+      "name": null,
+      "deleted": false,
+      "description": null,
+      "createdAt": "2026-09-24 15:28:35",
+      "modifiedAt": "2026-09-24 15:29:42",
+      "createdById": "620e86070a818798c",
+      "createdByName": "David Baez",
+      "modifiedById": "620e86070a818798c",
+      "modifiedByName": "David Baez",
+      "assignedUserId": "620e86070a818798c",
+      "assignedUserName": "David Baez",
+      "teamsIds": [],
+      "teamsNames": {},
+      "farmaProdutosIds": [
+        "62c5c1cfa599cac71"
+      ],
+      "farmaProdutosNames": {
+        "62c5c1cfa599cac71": "Cosentyx"
+      },
+      "productsIds": [
+        "652ffdea1d23f93c6",
+        "6669cac98210a9831",
+        "654cfc0d5aa549fc5",
+        "654cdddbdb063efd9"
+      ],
+      "productsNames": {
+        "652ffdea1d23f93c6": "Ac HIV 1+2",
+        "6669cac98210a9831": "Administración Kesimpta",
+        "654cfc0d5aa549fc5": "Alergias Específicas a 25 alimentos, IgE (Sangre)",
+        "654cdddbdb063efd9": "ANTI HBS-HEP B ANTI HBs"
+      },
+      "teams1Ids": [
+        "61e5ca8cdbe027691"
+      ],
+      "teams1Names": {
+        "61e5ca8cdbe027691": "Siempre Contigo"
+      }
+    },
+    {
+      "id": "6ab542104655892bb",
+      "name": null,
+      "deleted": false,
+      "description": null,
+      "createdAt": "2026-09-24 15:30:24",
+      "modifiedAt": "2026-09-24 15:30:24",
+      "createdById": "620e86070a818798c",
+      "createdByName": "David Baez",
+      "modifiedById": null,
+      "modifiedByName": null,
+      "assignedUserId": "620e86070a818798c",
+      "assignedUserName": "David Baez",
+      "teamsIds": [],
+      "teamsNames": {},
+      "farmaProdutosIds": [
+        "6a9726b7dbc6ee60c"
+      ],
+      "farmaProdutosNames": {
+        "6a9726b7dbc6ee60c": "Kesimpta (Ofatumumab) SC"
+      },
+      "productsIds": [
+        "688baef60acc22cbd",
+        "66685d7b72742f758"
+      ],
+      "productsNames": {
+        "688baef60acc22cbd": "Administracion de vacunas Shingrix, contra Herpes Zoster",
+        "66685d7b72742f758": "Alanino Aminotransferasa GOT (AST)*"
+      },
+      "teams1Ids": [
+        "61e5ca8cdbe027691"
+      ],
+      "teams1Names": {
+        "61e5ca8cdbe027691": "Siempre Contigo"
+      }
+    }
+  ]
+}

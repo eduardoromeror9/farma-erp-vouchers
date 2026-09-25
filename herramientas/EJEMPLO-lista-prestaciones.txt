@@ -1,0 +1,15 @@
+# Una prestacion por linea. Las lineas con # se ignoran.
+# Este es el formato de la lista que se le pasa al script con --prestaciones.
+Quantiferon
+Anticore total VHB
+Antigeno de Superficie VHB
+VHC
+VIH
+RX torax
+RX pelvis
+RMN (sacroiliaca, pelvis)
+Hemograma VHS
+Vacuna Hepatitis B
+Vacuna Antineumococica
+Vacuna contra la influenza (casos excepcionales)
+Radiografia de manos (casos excepcionales)

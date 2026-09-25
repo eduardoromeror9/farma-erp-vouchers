@@ -1,0 +1,30 @@
+define('custom:views/salesOrder/fields/farmaSucursales1', 'views/fields/link', function(Dep) {
+    return Dep.extend({
+        getSelectFilters: function() {
+            if (this.model.get('farmaPrestador1Id')) {
+                return {
+                    'farmaPrestador': {
+                        type: 'equals',
+                        attribute: 'farmaPrestadorId',
+                        value: this.model.get('farmaPrestador1Id'),
+                        data: {
+                            type: 'is',
+                            nameValue: this.model.get('farmaPrestador1Name')
+                        }
+                    }
+                };
+            }
+        },
+        getCreateAttributes: function() {
+            if (this.model.get('farmaPrestador1Id')) {
+                return {
+                    id: this.model.get('farmaPrestador1Id'),
+                    name: this.model.get('farmaPrestadorName')
+                }
+            }
+        },
+        
+        
+    });
+    
+});

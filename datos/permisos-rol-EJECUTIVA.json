@@ -1,0 +1,357 @@
+{
+  "id": "61f408676cb7b7317",
+  "name": "EJECUTIVA",
+  "deleted": false,
+  "assignmentPermission": "all",
+  "userPermission": "all",
+  "messagePermission": "all",
+  "portalPermission": "yes",
+  "groupEmailAccountPermission": "all",
+  "exportPermission": "yes",
+  "massUpdatePermission": "no",
+  "dataPrivacyPermission": "yes",
+  "followerManagementPermission": "not-set",
+  "auditPermission": "not-set",
+  "mentionPermission": "not-set",
+  "data": {
+    "Activities": true,
+    "FarmaAtencaoDomicilio": {
+      "create": "yes",
+      "read": "all",
+      "edit": "team",
+      "delete": "no",
+      "stream": "all"
+    },
+    "FarmaAuditoriaDeCorreos": {
+      "create": "yes",
+      "read": "all",
+      "edit": "all",
+      "delete": "no"
+    },
+    "KnowledgeBaseArticle": false,
+    "Task": {
+      "create": "yes",
+      "read": "all",
+      "edit": "team",
+      "delete": "no",
+      "stream": "team"
+    },
+    "Calendar": true,
+    "Campaign": {
+      "create": "yes",
+      "read": "all",
+      "edit": "team",
+      "delete": "no"
+    },
+    "Capacitacion": {
+      "create": "yes",
+      "read": "all",
+      "edit": "all",
+      "delete": "no",
+      "stream": "all"
+    },
+    "DocumentFolder": {
+      "create": "no",
+      "read": "all",
+      "edit": "team",
+      "delete": "no"
+    },
+    "ReportCategory": {
+      "create": "yes",
+      "read": "all",
+      "edit": "all",
+      "delete": "all"
+    },
+    "KnowledgeBaseCategory": false,
+    "EmailTemplateCategory": {
+      "create": "yes",
+      "read": "all",
+      "edit": "all",
+      "delete": "all"
+    },
+    "Account": false,
+    "FarmaLaboratorio": {
+      "create": "no",
+      "read": "all",
+      "edit": "no",
+      "delete": "no"
+    },
+    "FarmaColaborador": {
+      "create": "no",
+      "read": "all",
+      "edit": "no",
+      "delete": "no",
+      "stream": "no"
+    },
+    "FarmaComunas": {
+      "create": "no",
+      "read": "all",
+      "edit": "all",
+      "delete": "no",
+      "stream": "all"
+    },
+    "FarmaConsentimientoInformado": {
+      "create": "yes",
+      "read": "all",
+      "edit": "all",
+      "delete": "no"
+    },
+    "Email": {
+      "create": "yes",
+      "read": "all",
+      "edit": "all",
+      "delete": "all"
+    },
+    "InboundEmail": {
+      "create": "no",
+      "read": "all",
+      "edit": "no",
+      "delete": "no"
+    },
+    "EmailAccountScope": true,
+    "ExternalAccount": true,
+    "FarmaDepartamento": {
+      "create": "no",
+      "read": "all",
+      "edit": "all",
+      "delete": "no"
+    },
+    "FarmaDiagnosticos": {
+      "create": "no",
+      "read": "all",
+      "edit": "no",
+      "delete": "no",
+      "stream": "no"
+    },
+    "BpmnFlowchart": false,
+    "FarmaDispensacion": {
+      "create": "yes",
+      "read": "all",
+      "edit": "all",
+      "delete": "no"
+    },
+    "FarmaDistrito": {
+      "create": "no",
+      "read": "all",
+      "edit": "all",
+      "delete": "no"
+    },
+    "Currency": false,
+    "Document": {
+      "create": "yes",
+      "read": "all",
+      "edit": "all",
+      "delete": "no"
+    },
+    "FarmaDoses": {
+      "create": "no",
+      "read": "team",
+      "edit": "no",
+      "delete": "no"
+    },
+    "FarmaEnvioMaterial": {
+      "create": "yes",
+      "read": "all",
+      "edit": "all",
+      "delete": "no",
+      "stream": "no"
+    },
+    "FarmaEspecialidades": {
+      "create": "no",
+      "read": "all",
+      "edit": "no",
+      "delete": "no"
+    },
+    "FarmaEstados": {
+      "create": "no",
+      "read": "all",
+      "edit": "no",
+      "delete": "no",
+      "stream": "team"
+    },
+    "Invoice": {
+      "create": "yes",
+      "read": "all",
+      "edit": "all",
+      "delete": "no"
+    },
+    "FarmaDispensacionDeBonificacion": {
+      "create": "yes",
+      "read": "all",
+      "edit": "all",
+      "delete": "no"
+    },
+    "FarmaEstadosVoucher": false,
+    "FarmaIngresodedispensacion": {
+      "create": "yes",
+      "read": "all",
+      "edit": "all",
+      "delete": "no"
+    },
+    "Firma": {
+      "create": "yes",
+      "read": "all",
+      "edit": "all",
+      "delete": "no",
+      "stream": "all"
+    },
+    "FarmaHistorialEstados": {
+      "create": "yes",
+      "read": "all",
+      "edit": "all",
+      "delete": "no",
+      "stream": "no"
+    },
+    "Import": false,
+    "Report": {
+      "create": "yes",
+      "read": "all",
+      "edit": "all",
+      "delete": "all"
+    },
+    "TargetList": false,
+    "Call": {
+      "create": "yes",
+      "read": "all",
+      "edit": "team",
+      "delete": "no"
+    },
+    "FarmaMedicos": {
+      "create": "no",
+      "read": "all",
+      "edit": "no",
+      "delete": "no"
+    },
+    "VoipMessage": false,
+    "Opportunity": false,
+    "Contact": {
+      "create": "yes",
+      "read": "team",
+      "edit": "team",
+      "delete": "no",
+      "stream": "team"
+    },
+    "Template": false,
+    "EmailTemplate": false,
+    "Lead": false,
+    "Product": {
+      "create": "yes",
+      "read": "all",
+      "edit": "all",
+      "delete": "no",
+      "stream": "all"
+    },
+    "Prestaciones": {
+      "create": "yes",
+      "read": "all",
+      "edit": "all",
+      "delete": "no"
+    },
+    "FarmaPrestador": {
+      "create": "no",
+      "read": "all",
+      "edit": "no",
+      "delete": "no",
+      "stream": "no"
+    },
+    "BpmnUserTask": false,
+    "BpmnProcess": false,
+    "FarmaProduto": {
+      "create": "no",
+      "read": "team",
+      "edit": "no",
+      "delete": "no"
+    },
+    "Team": {
+      "read": "team"
+    },
+    "FarmaReportesExternos": false,
+    "FarmaResultadoExamen": false,
+    "Meeting": false,
+    "FarmaSeguroComplementar": {
+      "create": "no",
+      "read": "all",
+      "edit": "no",
+      "delete": "no"
+    },
+    "FarmaSeguroSaude": {
+      "create": "no",
+      "read": "all",
+      "edit": "no",
+      "delete": "no"
+    },
+    "Case": {
+      "create": "yes",
+      "read": "all",
+      "edit": "all",
+      "delete": "no",
+      "stream": "all"
+    },
+    "FarmaSubEstados": {
+      "create": "no",
+      "read": "all",
+      "edit": "no",
+      "delete": "no",
+      "stream": "team"
+    },
+    "FarmaTipoCobertura": false,
+    "FarmaTratamientos": false,
+    "User": {
+      "read": "all",
+      "edit": "own"
+    },
+    "SalesOrder": {
+      "create": "yes",
+      "read": "all",
+      "edit": "all",
+      "delete": "no",
+      "stream": "all"
+    },
+    "Webhook": false,
+    "WorkingTimeCalendar": true,
+    "CDiccionarioPMP": {
+      "create": "no",
+      "read": "all",
+      "edit": "no",
+      "delete": "no",
+      "stream": "no"
+    },
+    "CSucursalPrestacion": {
+      "create": "no",
+      "read": "all",
+      "edit": "no",
+      "delete": "no",
+      "stream": "no"
+    },
+    "FarmaSucursales": {
+      "create": "no",
+      "read": "all",
+      "edit": "no",
+      "delete": "no",
+      "stream": "no"
+    },
+    "FarmaHistorialPrecios": {
+      "create": "no",
+      "read": "all",
+      "edit": "no",
+      "delete": "no",
+      "stream": "no"
+    }
+  },
+  "fieldData": {
+    "InboundEmail": {
+      "name": {
+        "read": "yes",
+        "edit": "no"
+      }
+    },
+    "FarmaHistorialEstados": {
+      "contact": {
+        "read": "yes",
+        "edit": "no"
+      }
+    }
+  },
+  "createdAt": "2022-01-28 15:14:47",
+  "modifiedAt": "2026-09-24 20:51:52"
+}

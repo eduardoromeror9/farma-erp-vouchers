@@ -1,0 +1,422 @@
+/**
+ * Ticket 10416 - Elegibilidad de prestaciones y proveedores.
+ *
+ * Modulo compartido por las vistas del voucher (SalesOrder):
+ *   - custom:views/salesOrder/fields/prestaciones
+ *   - custom:views/salesOrder/fields/farmaPrestador1
+ *   - custom:views/salesOrder/fields/farmaSucursales1
+ *
+ * Regla de negocio implementada (validada con David Baez el 24-sep-2026):
+ *   Programa (Contact.teams) + Medicamento (Contact.produtoId)
+ *       -> prestaciones elegibles (CDiccionarioPMP.productsIds)
+ *
+ * El diagnostico NO participa, por decision de diseno.
+ *
+ * Modo SUGERENCIA: el filtro acorta la lista, nunca bloquea. Si la
+ * combinacion no tiene match, se devuelve null y la vista debe dejar
+ * pasar todo sin restringir (ver fallback en cada vista).
+ *
+ * Fecha: 24-09-2026
+ */
+
+define('custom:utils/elegibilidad-10416', [], function () {
+
+    var MANTENEDOR = 'CDiccionarioPMP';
+    var ATRIBUTO_PROGRAMA = 'teams1';
+    var ATRIBUTO_MEDICAMENTO = 'farmaProdutos';
+
+    // Cache en memoria durante la sesion del navegador.
+    // clave: 'elegibles:<contactId>'
+    var cacheElegibles = {};
+    // clave: 'sucursales:<prestadorId>' y 'prestadores:<productIds joined>'
+    var cacheProveedores = {};
+
+    // Anti-request duplicado: evita disparar varias veces la misma consulta
+    // cuando el usuario cambia prestador/sucursal muy rapido.
+    var enCurso = {};
+
+    /**
+     * Devuelve el objecto Contact del paciente del voucher.
+     * null si el voucher no tiene paciente.
+     */
+    function obtenerPaciente(contactId) {
+        if (!contactId) {
+            return Promise.resolve(null);
+        }
+
+        return Espo.Ajax.getRequest('Contact/' + contactId, {
+            select: 'id,teamsIds,produtoId'
+        }).then(function (paciente) {
+            return paciente || null;
+        }).catch(function () {
+            return null;
+        });
+    }
+
+    /**
+     * Prestaciones elegibles para el paciente.
+     *
+     * @param {string} contactId  Contact del paciente del voucher
+     * @return {Promise<Array|null>} array de productIds, o null si NO aplica
+     *                              el filtro (sin programa, sin medicamento,
+     *                              sin match, o error). null = no restringir.
+     */
+    function obtenerElegibles(contactId) {
+        if (!contactId) {
+            return Promise.resolve(null);
+        }
+
+        if (cacheElegibles[contactId] !== undefined) {
+            return Promise.resolve(cacheElegibles[contactId]);
+        }
+
+        if (enCurso['eg:' + contactId]) {
+            return enCurso['eg:' + contactId];
+        }
+
+        var promesa = obtenerPaciente(contactId).then(function (paciente) {
+            if (!paciente) {
+                return null;
+            }
+
+            var programas = paciente.teamsIds || [];
+            var medicamento = paciente.produtoId;
+
+            // Sin programa o sin medicamento no hay clave de busqueda:
+            // no se restringe nada.
+            if (!programas.length || !medicamento) {
+                return null;
+            }
+
+            var where = [];
+
+            programas.forEach(function (programaId) {
+                where.push({
+                    type: 'linkedWith',
+                    attribute: ATRIBUTO_PROGRAMA,
+                    value: programaId
+                });
+            });
+
+            where.push({
+                type: 'linkedWith',
+                attribute: ATRIBUTO_MEDICAMENTO,
+                value: medicamento
+            });
+
+            return Espo.Ajax.getRequest(MANTENEDOR, {
+                maxSize: 200,
+                select: 'id,name,productsIds',
+                where: where
+            }).then(function (response) {
+                var ids = {};
+                var total = 0;
+
+                (response.list || []).forEach(function (registro) {
+                    (registro.productsIds || []).forEach(function (productId) {
+                        ids[productId] = true;
+                        total++;
+                    });
+                });
+
+                // Sin registros coincidentes -> no se restringe.
+                if (!total) {
+                    return null;
+                }
+
+                return Object.keys(ids);
+            }).catch(function () {
+                // Si el usuario no tiene permiso sobre el mantenedor, o la
+                // API falla, se deja pasar todo en vez de dejar sin
+                // prestaciones a la ejecutiva.
+                return null;
+            });
+        });
+
+        enCurso['eg:' + contactId] = promesa;
+
+        return promesa.then(function (resultado) {
+            cacheElegibles[contactId] = resultado;
+            delete enCurso['eg:' + contactId];
+
+            return resultado;
+        }, function (error) {
+            delete enCurso['eg:' + contactId];
+
+            throw error;
+        });
+    }
+
+    /**
+     * Interseca dos listas de ids. null en cualquiera de las entradas
+     * significa "sin restriccion" y devuelve null.
+     */
+    function intersecar(conRestriccion, sinRestriccion) {
+        if (!conRestriccion) {
+            return null;
+        }
+
+        if (!sinRestriccion) {
+            return conRestriccion;
+        }
+
+        var permitidos = {};
+        sinRestriccion.forEach(function (id) {
+            permitidos[id] = true;
+        });
+
+        return conRestriccion.filter(function (id) {
+            return !!permitidos[id];
+        });
+    }
+
+    /**
+     * Prestaciones habilitadas en una sucursal.
+     * Usa CSucursalPrestacion (producto + sucursal + estado + disponibleVoucher).
+     *
+     * @return {Promise<Array|null>} productIds, o null si no hay info.
+     */
+    function obtenerPrestacionesDeSucursal(sucursalId) {
+        if (!sucursalId) {
+            return Promise.resolve(null);
+        }
+
+        if (cacheProveedores['suc:' + sucursalId] !== undefined) {
+            return Promise.resolve(cacheProveedores['suc:' + sucursalId]);
+        }
+
+        return Espo.Ajax.getRequest('CSucursalPrestacion', {
+            maxSize: 500,
+            select: 'id,productId,farmaSucursalesId,estado,disponibleVoucher',
+            where: [
+                {
+                    type: 'equals',
+                    attribute: 'farmaSucursalesId',
+                    value: sucursalId
+                },
+                {
+                    type: 'equals',
+                    attribute: 'estado',
+                    value: 'Activa'
+                },
+                {
+                    type: 'equals',
+                    attribute: 'disponibleVoucher',
+                    // OJO: la API de Espo NO acepta el booleano "true" en
+                    // este filtro (devuelve 0). Hay que mandar 1.
+                    value: 1
+                }
+            ]
+        }).then(function (response) {
+            var ids = {};
+
+            (response.list || []).forEach(function (registro) {
+                if (registro.productId) {
+                    ids[registro.productId] = true;
+                }
+            });
+
+            var resultado = Object.keys(ids);
+
+            cacheProveedores['suc:' + sucursalId] = resultado;
+
+            return resultado;
+        }).catch(function () {
+            return null;
+        });
+    }
+
+    /**
+     * Prestaciones de un prestador usando el historico de precios
+     * (mismo criterio que usaba el filtro anterior de la vista).
+     *
+     * @return {Promise<Array|null>} productIds, o null si no hay info.
+     */
+    function obtenerPrestacionesDePrestador(prestadorId, sucursalId) {
+        if (!prestadorId) {
+            return Promise.resolve(null);
+        }
+
+        var where = [
+            {
+                type: 'equals',
+                attribute: 'farmaPrestadorId',
+                value: prestadorId
+            }
+        ];
+
+        if (sucursalId) {
+            where.push({
+                type: 'linkedWith',
+                attribute: 'farmaSucursaleses',
+                value: sucursalId
+            });
+        }
+
+        return Espo.Ajax.getRequest('FarmaHistorialPrecios', {
+            maxSize: 500,
+            sortBy: 'createdAt',
+            asc: false,
+            select: 'id,productId',
+            where: where
+        }).then(function (response) {
+            var ids = {};
+
+            (response.list || []).forEach(function (registro) {
+                if (registro.productId) {
+                    ids[registro.productId] = true;
+                }
+            });
+
+            return Object.keys(ids);
+        }).catch(function () {
+            return null;
+        });
+    }
+
+    /**
+     * Prestaciones habilitadas en la sucursal + prestador.
+     * Une las dos fuentes disponibles para no perder opciones.
+     */
+    function obtenerDisponibles(prestadorId, sucursalId) {
+        return Promise.all([
+            obtenerPrestacionesDeSucursal(sucursalId),
+            obtenerPrestacionesDePrestador(prestadorId, sucursalId)
+        ]).then(function (resultados) {
+            var porSucursal = resultados[0];
+            var porPrestador = resultados[1];
+
+            if (!porSucursal && !porPrestador) {
+                return null;
+            }
+
+            var ids = {};
+
+            (porSucursal || []).forEach(function (id) {
+                ids[id] = true;
+            });
+
+            (porPrestador || []).forEach(function (id) {
+                ids[id] = true;
+            });
+
+            return Object.keys(ids);
+        });
+    }
+
+    /**
+     * IDs de las sucursales que ofrecen al menos una prestacion elegible.
+     *
+     * @param {Array} elegibles
+     * @param {Array|null} sucursalIds  restriction adicional (prestador elegido)
+     * @return {Promise<Array|null>} sucursalIds, o null si no aplica.
+     */
+    function obtenerSucursalesElegibles(elegibles, sucursalIds) {
+        if (!elegibles || !elegibles.length) {
+            return Promise.resolve(null);
+        }
+
+        var where = [
+            {
+                type: 'in',
+                attribute: 'productId',
+                value: elegibles
+            },
+            {
+                type: 'equals',
+                attribute: 'estado',
+                value: 'Activa'
+            },
+            {
+                type: 'equals',
+                attribute: 'disponibleVoucher',
+                // OJO: la API de Espo NO acepta el booleano "true" aqui.
+                value: 1
+            }
+        ];
+
+        return Espo.Ajax.getRequest('CSucursalPrestacion', {
+            maxSize: 500,
+            select: 'id,productId,farmaSucursalesId',
+            where: where
+        }).then(function (response) {
+            var ids = {};
+
+            (response.list || []).forEach(function (registro) {
+                if (registro.farmaSucursalesId) {
+                    ids[registro.farmaSucursalesId] = true;
+                }
+            });
+
+            var resultado = Object.keys(ids);
+
+            if (!resultado.length) {
+                return null;
+            }
+
+            return intersecar(resultado, sucursalIds);
+        }).catch(function () {
+            return null;
+        });
+    }
+
+    /**
+     * IDs de los prestadores elegibles (los que tienen alguna sucursal con
+     * una prestacion elegible habilitada).
+     *
+     * @param {Array} elegibles
+     * @param {Array|null} prestadorIds  filtro adicional (estado/tipo)
+     * @return {Promise<Array|null>} prestadorIds, o null si no aplica.
+     */
+    function obtenerPrestadoresElegibles(elegibles, prestadorIds) {
+        if (!elegibles || !elegibles.length) {
+            return Promise.resolve(null);
+        }
+
+        return obtenerSucursalesElegibles(elegibles, null).then(function (sucursalIds) {
+            if (!sucursalIds) {
+                return null;
+            }
+
+            return Espo.Ajax.getRequest('FarmaSucursales', {
+                maxSize: 500,
+                select: 'id,name,farmaPrestadorId',
+                where: [
+                    {
+                        type: 'in',
+                        attribute: 'id',
+                        value: sucursalIds
+                    }
+                ]
+            }).then(function (response) {
+                var ids = {};
+
+                (response.list || []).forEach(function (sucursal) {
+                    if (sucursal.farmaPrestadorId) {
+                        ids[sucursal.farmaPrestadorId] = true;
+                    }
+                });
+
+                var resultado = Object.keys(ids);
+
+                if (!resultado.length) {
+                    return null;
+                }
+
+                return intersecar(resultado, prestadorIds);
+            });
+        }).catch(function () {
+            return null;
+        });
+    }
+
+    return {
+        obtenerElegibles: obtenerElegibles,
+        obtenerDisponibles: obtenerDisponibles,
+        obtenerPrestacionesDeSucursal: obtenerPrestacionesDeSucursal,
+        obtenerPrestacionesDePrestador: obtenerPrestacionesDePrestador,
+        obtenerSucursalesElegibles: obtenerSucursalesElegibles,
+        obtenerPrestadoresElegibles: obtenerPrestadoresElegibles,
+        intersecar: intersecar
+    };
+});

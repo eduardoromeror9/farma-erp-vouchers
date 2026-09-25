@@ -1,0 +1,33 @@
+define('custom:views/salesOrder/fields/farmaPrestador1', 'views/fields/link', function (Dep) {
+    return Dep.extend({
+        getSelectFilters: function () {
+            var cTipoDeVoucher = this.model.get('cTipoDeVoucher');
+            if (cTipoDeVoucher && cTipoDeVoucher.length) {
+                return {
+                    'tipoDeVoucher': {
+                        type: 'arrayAnyOf',
+                        attribute: 'tipoDeVoucher',
+                        value: cTipoDeVoucher,
+                        data: {
+                            type: 'arrayAnyOf',
+                            nameValue: cTipoDeVoucher
+                        }
+                    },
+                    'estadoPrestador': {
+                        type: 'in',
+                        attribute: 'estadoPrestador',
+                        value: ['Contrato vigente', 'En gestión de Adendum']
+                    }
+                };
+            }
+        },
+        getCreateAttributes: function () {
+            var cTipoDeVoucher = this.model.get('cTipoDeVoucher');
+            if (cTipoDeVoucher) {
+                return {
+                    'tipoDeVoucher': cTipoDeVoucher
+                };
+            }
+        },
+    });
+});

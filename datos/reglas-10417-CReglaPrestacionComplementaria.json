@@ -1,0 +1,56 @@
+{
+  "generado": "2026-09-25",
+  "entidad": "CReglaPrestacionComplementaria",
+  "descripcion": "Reglas de prestaciones complementarias (ticket 10417). El hook AddPrestacionesDestino.php las ejecuta.",
+  "total": 4,
+  "registros": [
+    {
+      "id": "6ab56b46ea65a7e83",
+      "name": "CP01 y CP06 Regla A Toma muestra a Hemograma y Creatinina Sede Centro",
+      "description": "Regla de prueba CP ticket 10417 dev 2026-09-24",
+      "activa": true,
+      "prestadorId": "6ab2b493c7fe44f8c",
+      "prestadorName": "PRESTADOR PRUEBA SANTIAGO",
+      "sucursalId": "6ab2b497bf0956353",
+      "sucursalName": "Sede Prueba Santiago Centro",
+      "prestacionOrigenId": "6580a7bedd53d2a79",
+      "prestacionOrigenName": "Toma de Muestra"
+    },
+    {
+      "id": "6ab56b4730bb855e3",
+      "name": "CP02 Regla B Toma muestra a Perfil hepatico Sede Melipilla",
+      "description": "Regla de prueba CP ticket 10417 dev 2026-09-24",
+      "activa": true,
+      "prestadorId": "6ab2b493c7fe44f8c",
+      "prestadorName": "PRESTADOR PRUEBA SANTIAGO",
+      "sucursalId": "6ab2b498062ff36c3",
+      "sucursalName": "Sede Prueba Melipilla",
+      "prestacionOrigenId": "6580a7bedd53d2a79",
+      "prestacionOrigenName": "Toma de Muestra"
+    },
+    {
+      "id": "6ab56b4768793d5de",
+      "name": "CP03 Regla C inactiva Toma muestra a VHC Sede Centro",
+      "description": "Regla de prueba CP ticket 10417 dev 2026-09-24",
+      "activa": false,
+      "prestadorId": "6ab2b493c7fe44f8c",
+      "prestadorName": "PRESTADOR PRUEBA SANTIAGO",
+      "sucursalId": "6ab2b497bf0956353",
+      "sucursalName": "Sede Prueba Santiago Centro",
+      "prestacionOrigenId": "6580a7bedd53d2a79",
+      "prestacionOrigenName": "Toma de Muestra"
+    },
+    {
+      "id": "6ab56b479eccb73ec",
+      "name": "CP05 Regla D Hemograma a Urocultivo Sede Centro",
+      "description": "Regla de prueba CP ticket 10417 dev 2026-09-24",
+      "activa": true,
+      "prestadorId": "6ab2b493c7fe44f8c",
+      "prestadorName": "PRESTADOR PRUEBA SANTIAGO",
+      "sucursalId": "6ab2b497bf0956353",
+      "sucursalName": "Sede Prueba Santiago Centro",
+      "prestacionOrigenId": "654d27feb8b623e67",
+      "prestacionOrigenName": "Hemograma"
+    }
+  ]
+}

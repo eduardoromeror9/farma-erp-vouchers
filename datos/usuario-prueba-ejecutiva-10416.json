@@ -1,0 +1,15 @@
+{
+  "nota": "Ficha de la usuaria de prueba del ticket 10416. La clave NO esta en este repositorio: se define en la variable de entorno API_AUTH. Este archivo es solo el registro del usuario.",
+  "id": "6ab592e0eb7ef8a57",
+  "userName": "ejecutiva_prueba_10416",
+  "password": "NO ESTA EN EL REPOSITORIO. Definir en API_AUTH con el formato usuario:clave.",
+  "email": "ejecutiva.prueba10416@test.cl",
+  "roles": {
+    "61f408676cb7b7317": "EJECUTIVA"
+  },
+  "teams": {
+    "61e5ca8cdbe027691": "Siempre Contigo"
+  },
+  "createdAt": "2026-09-24 21:15:12",
+  "borrarAlCerrar": "Se borra de m6dev cuando el proyecto cierre."
+}

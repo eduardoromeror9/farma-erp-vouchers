@@ -1,0 +1,324 @@
+{
+  "generado": "2026-09-25",
+  "entidad": "CDiccionarioPMP",
+  "descripcion": "Mantenedor de elegibilidad: medicamento -> prestaciones. Es lo que lee el filtro del 10416.",
+  "como_se_usa": "Un registro por medicamento. El filtro busca por Contact.produtoId (que apunta a FarmaProduto) y cruza con lo habilitado en la sede.",
+  "registros": [
+    {
+      "id": "6ab567b03291ea415",
+      "nombre": "Siempre Contigo - Cosentyx",
+      "medicamento": {
+        "id": "6a9726acc3a8275b8",
+        "nombre": "Cosentyx (Secukinumab) SC"
+      },
+      "programa": "Siempre Contigo",
+      "n_prestaciones": 13,
+      "prestaciones": [
+        {
+          "id": "661d909dc0948e0e7",
+          "nombre": "Anticore Total"
+        },
+        {
+          "id": "6647c267ec08b009d",
+          "nombre": "Antígeno de Superficie (HBsAG)"
+        },
+        {
+          "id": "654d27feb8b623e67",
+          "nombre": "Hemograma"
+        },
+        {
+          "id": "652ff3c9d28c0c38e",
+          "nombre": "Quantiferon"
+        },
+        {
+          "id": "6ab56764ee71b09df",
+          "nombre": "Radiografía de manos (casos excepcionales)"
+        },
+        {
+          "id": "6503713bcb6aeff61",
+          "nombre": "Radiografía simple de Torax Ap y L"
+        },
+        {
+          "id": "680be840005f5a4df",
+          "nombre": "RESONANCIA MAGNETICA SACROILÍACA"
+        },
+        {
+          "id": "6ab567641917cee7a",
+          "nombre": "RX pelvis"
+        },
+        {
+          "id": "6ab5676483a078550",
+          "nombre": "Vacuna Antineumocócica"
+        },
+        {
+          "id": "6ab56764b8f927ff8",
+          "nombre": "Vacuna contra la influenza (casos excepcionales)"
+        },
+        {
+          "id": "6ab567644e9eb9c1d",
+          "nombre": "Vacuna Hepatitis B"
+        },
+        {
+          "id": "6ab567639ff8378df",
+          "nombre": "VHC"
+        },
+        {
+          "id": "655fb8c133fac4a3d",
+          "nombre": "VIH 1+2"
+        }
+      ]
+    },
+    {
+      "id": "6ab567b0840a0dab7",
+      "nombre": "Siempre Contigo - Kesimpta",
+      "medicamento": {
+        "id": "6a9726b7dbc6ee60c",
+        "nombre": "Kesimpta (Ofatumumab) SC"
+      },
+      "programa": "Siempre Contigo",
+      "n_prestaciones": 21,
+      "prestaciones": [
+        {
+          "id": "661d909dc0948e0e7",
+          "nombre": "Anticore Total"
+        },
+        {
+          "id": "6647c267ec08b009d",
+          "nombre": "Antígeno de Superficie (HBsAG)"
+        },
+        {
+          "id": "664e1f217dc5ac48f",
+          "nombre": "Creatinina"
+        },
+        {
+          "id": "654d27feb8b623e67",
+          "nombre": "Hemograma"
+        },
+        {
+          "id": "667edb1235854fd24",
+          "nombre": "Inmunoglobulina G"
+        },
+        {
+          "id": "667edb393512d79f2",
+          "nombre": "Inmunoglobulina M"
+        },
+        {
+          "id": "6ab567659d5545724",
+          "nombre": "Orina completa"
+        },
+        {
+          "id": "663bab18ee1a2246a",
+          "nombre": "Prueba de embarazo"
+        },
+        {
+          "id": "652ff3c9d28c0c38e",
+          "nombre": "Quantiferon"
+        },
+        {
+          "id": "664e1444242316794",
+          "nombre": "RM Columna Dorsal"
+        },
+        {
+          "id": "67180332656fed49f",
+          "nombre": "RM de Cerebro Con Contraste"
+        },
+        {
+          "id": "6ab56766b138760cd",
+          "nombre": "RMN médula espinal completa (casos excepcionales)"
+        },
+        {
+          "id": "6ab567652f676753d",
+          "nombre": "Test de anticuerpos para hepatitis C"
+        },
+        {
+          "id": "6ab5676612990f28f",
+          "nombre": "TSH"
+        },
+        {
+          "id": "6ab56765d13234fdc",
+          "nombre": "Urocultivo"
+        },
+        {
+          "id": "6ab5676483a078550",
+          "nombre": "Vacuna Antineumocócica"
+        },
+        {
+          "id": "6ab567644e9eb9c1d",
+          "nombre": "Vacuna Hepatitis B"
+        },
+        {
+          "id": "6ab567667c7821759",
+          "nombre": "Vacuna varicela"
+        },
+        {
+          "id": "6ab56765666356995",
+          "nombre": "Varicela Zoster (IgG)"
+        },
+        {
+          "id": "6ab5676647a2d987a",
+          "nombre": "VDRL"
+        },
+        {
+          "id": "655fb8c133fac4a3d",
+          "nombre": "VIH 1+2"
+        }
+      ]
+    },
+    {
+      "id": "6ab567b137cb5dd41",
+      "nombre": "Siempre Contigo - Kisqali",
+      "medicamento": {
+        "id": "6a9726a1eb2ca0fe2",
+        "nombre": "Kisqali (Ribociclib) Compr."
+      },
+      "programa": "Siempre Contigo",
+      "n_prestaciones": 8,
+      "prestaciones": [
+        {
+          "id": "664e1f217dc5ac48f",
+          "nombre": "Creatinina"
+        },
+        {
+          "id": "654d27226f2697306",
+          "nombre": "Electrocardiograma"
+        },
+        {
+          "id": "6ab567698e8089d95",
+          "nombre": "Electrolitos plasmáticos"
+        },
+        {
+          "id": "664e17ad5ee1cc11f",
+          "nombre": "Gammagrafia Ósea y SPECT CT Localizado"
+        },
+        {
+          "id": "654d27feb8b623e67",
+          "nombre": "Hemograma"
+        },
+        {
+          "id": "6ab56769595f30492",
+          "nombre": "Perfil bioquímico"
+        },
+        {
+          "id": "6647c4144c2bb2a5b",
+          "nombre": "Perfil hepático + GGTP"
+        },
+        {
+          "id": "65f34dc23bfecf290",
+          "nombre": "Tomografía Axial Computarizada (TAC) simple"
+        }
+      ]
+    },
+    {
+      "id": "6ab567b17a44f986c",
+      "nombre": "Siempre Contigo - Scemblix",
+      "medicamento": {
+        "id": "6a9726c47aa394117",
+        "nombre": "Scemblix (Asciminib) Compr"
+      },
+      "programa": "Siempre Contigo",
+      "n_prestaciones": 2,
+      "prestaciones": [
+        {
+          "id": "654cfd7c73dbb2567",
+          "nombre": "Mutación ABL T315I el LMC (Sangre o Médula Osea)"
+        },
+        {
+          "id": "656df12926ca90c21",
+          "nombre": "Traslocación BCR/ABL"
+        }
+      ]
+    },
+    {
+      "id": "6ab567b0dc0a47f25",
+      "nombre": "Siempre Contigo - Zolgensma",
+      "medicamento": {
+        "id": "670d811136ecfc4ce",
+        "nombre": "Zolgensma"
+      },
+      "programa": "Siempre Contigo",
+      "n_prestaciones": 20,
+      "prestaciones": [
+        {
+          "id": "6ab56767c791d2440",
+          "nombre": "Anticuerpos anti-AAV9"
+        },
+        {
+          "id": "6ab56769240e3ab41",
+          "nombre": "Apoyo psicológico"
+        },
+        {
+          "id": "661d9133b028ca6ac",
+          "nombre": "Bilirrubina total"
+        },
+        {
+          "id": "664e1f217dc5ac48f",
+          "nombre": "Creatinina"
+        },
+        {
+          "id": "6ab567675c2a23648",
+          "nombre": "Creatinina cinasa (CK)"
+        },
+        {
+          "id": "6ab567684055aacb8",
+          "nombre": "Determinación a domicilio del peso del bebé con balanza pediátrica"
+        },
+        {
+          "id": "6ab5676809bad9c90",
+          "nombre": "Enfermera 24/7"
+        },
+        {
+          "id": "6888dc2375187d451",
+          "nombre": "ESTUDIO DIAGNOSTICO - rearreglos de los genes SMN1 y SMN2"
+        },
+        {
+          "id": "664e1e6a8291b61a8",
+          "nombre": "GGT"
+        },
+        {
+          "id": "661d921d87063f1d3",
+          "nombre": "GPT (ALT)"
+        },
+        {
+          "id": "6503701e82ae2eb2e",
+          "nombre": "Hemograma Completo"
+        },
+        {
+          "id": "6ab56766e6cc64a8d",
+          "nombre": "Nivel de troponina (Troponina I o Troponina T)"
+        },
+        {
+          "id": "664e1dc17f2d0fa5f",
+          "nombre": "Proteínas Totales (Albuminas-Globulinas)"
+        },
+        {
+          "id": "6ab5676790fe627f2",
+          "nombre": "Proteinuria aislada (orina)"
+        },
+        {
+          "id": "667edb98bf904e752",
+          "nombre": "Pruebas Hepáticas"
+        },
+        {
+          "id": "6ab56768ac5f89a42",
+          "nombre": "Rehabilitación broncopulmonar"
+        },
+        {
+          "id": "6ab56768e1512d75d",
+          "nombre": "Rehabilitación kinesiológica"
+        },
+        {
+          "id": "6ab567687663e30ea",
+          "nombre": "Seguimiento por parte del neuropediatra"
+        },
+        {
+          "id": "6ab567672746dcf3a",
+          "nombre": "Tiempo parcial de tromboplastina activado (TTPa)"
+        },
+        {
+          "id": "664e1cfb770dbb1c6",
+          "nombre": "TP+INR"
+        }
+      ]
+    }
+  ]
+}
