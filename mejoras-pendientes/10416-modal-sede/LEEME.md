@@ -1,4 +1,4 @@
-# Mejora pendiente — 10416: el modal de sede muestra las 713 sucursales
+# Mejora pendiente 10416: el modal de sede muestra las 713 sucursales
 
 > **Estado: NO desplegado.** Estos archivos están preparados pero **no están en el
 > servidor** y no forman parte de lo que se subió el 25-sep. La versión que está
@@ -13,8 +13,8 @@
 
 | Requisito de la reunión | Estado |
 |---|---|
-| Mostrar solo las prestaciones del diccionario del paciente | **Funciona** — 13 en Cosentyx, 21 en Kesimpta |
-| Proponer la sucursal más cercana | **Funciona** — se autocompleta al elegir el paciente |
+| Mostrar solo las prestaciones del diccionario del paciente | **Funciona**: 13 en Cosentyx, 21 en Kesimpta |
+| Proponer la sucursal más cercana | **Funciona**: se autocompleta al elegir el paciente |
 
 Validado en pantalla por Eduardo el 25-sep y por David.
 

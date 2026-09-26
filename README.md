@@ -1,4 +1,4 @@
-# Farma eRP — Automatización de vouchers en EspoCRM
+# Farma eRP: automatización de vouchers en EspoCRM
 
 Contenido **exacto de lo que está corriendo en m6dev** (`https://m6dev.farma-erp.cl/`,
 EspoCRM 8.4.2, PHP 8.1.31) y de los datos que hay cargados ahí.
@@ -34,7 +34,7 @@ espocrm-dev/
 └── .env.example        Plantilla de credenciales, sin valores reales
 ```
 
-## 3. `en-servidor/` — el código
+## 3. `en-servidor/`: el código
 
 Rutas relativas a `/var/www/html/m6dev`.
 
@@ -80,7 +80,7 @@ a David.**
 
 Para volver atrás, lo único que hace falta son los 2 archivos de `rollback/24sep-validado/`.
 
-## 5. `datos/` — lo que está cargado en m6dev
+## 5. `datos/`: lo que está cargado en m6dev
 
 | Archivo | Qué es |
 |---|---|
@@ -132,7 +132,7 @@ Esa usuaria se borra de m6dev al cerrar el proyecto. Ver la sección
 
 ## 6-bis. `herramientas/`
 
-`cargar-diccionario.py` — carga el diccionario de elegibilidad (medicamento → prestaciones)
+`cargar-diccionario.py` carga el diccionario de elegibilidad (medicamento → prestaciones)
 por API, en dos pasos: primero **revierve** y después, solo si está limpio, **aplica**.
 
 ```bash
@@ -169,7 +169,7 @@ segundo registro igual y duplicaría las prestaciones en el filtro. Por eso:
 | Medicamento ya cargado en el diccionario | **Se niega a escribir**; usa `--actualizar` |
 | `Team` con id vacío (el "AlfaCare" de m6dev) | Lo descarta: escribiría un programa inexistente |
 
-`crear-paciente.py` — crea un paciente (Contact) por API, también en dos pasos. Antes de
+`crear-paciente.py` crea un paciente (Contact) por API, también en dos pasos. Antes de
 crear, revisa todo lo que el filtro necesita y **te muestra qué va a pasar**:
 
 ```bash
@@ -218,7 +218,7 @@ las usas desde otro lado):
 Los dos scripts necesitan un usuario con permiso de **creación** en `Contact`, `Product` y
 `CDiccionarioPMP`. Con el rol EJECUTIVA responden 403.
 
-## 7. `mejoras-pendientes/` — mejora futura, NO desplegada
+## 7. `mejoras-pendientes/`: mejora futura, NO desplegada
 
 ### El problema: el modal de sede muestra las 713 sucursales
 
