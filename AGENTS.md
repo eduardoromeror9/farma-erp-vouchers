@@ -17,8 +17,7 @@ desplegado.
 
 ## Reglas de acceso
 
-- **Solo David Báez** tiene acceso al servidor: sube archivos y corre
-  `php clear_cache.php`. Nadie más.
+- **Solo David Báez** tiene acceso al servidor: sube archivos.
 - Se trabaja contra la API de m6dev con credenciales de variables de entorno
   (`API_URL`, `API_AUTH`, `MODULO_10416`).
 - **No conectes a ningún host de Farma eRP.** No leas, pidas ni administres

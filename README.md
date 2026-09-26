@@ -74,7 +74,6 @@ a David.**
 | Archivo | Qué es |
 |---|---|
 | `INSTRUCCIONES.md` | Rutas, comandos, md5, permisos, protocolo de prueba y rollback |
-| `MENSAJE-PARA-DAVID.txt` | El mensaje listo para copiar y pegar |
 | `rollback/24sep-validado/` | La versión del 24-sep, la que se validó en pantalla |
 | `rollback/pre-10416/` | Los originales previos al 10416 |
 
@@ -232,7 +231,8 @@ prestaciones sigue funcionando.
 
 ### Los 3 archivos de la corrección
 
-En `mejoras-pendientes/10416-modal-sede/`, ya en sus rutas reales del servidor:
+Los 3 archivos están en `mejoras-pendientes/`. Estas son las rutas de destino en el
+servidor:
 
 | Archivo | Qué cambia |
 |---|---|
@@ -254,8 +254,8 @@ vacío, y el modal no tenía ninguna lista por la que acotar ni ordenar.
 - **NO desplegada.** No se ha subido al servidor ni probado en pantalla
 - Riesgo bajo: no toca la lógica de elegibilidad ni el prellenado, solo acota y ordena la
   lista del modal
-- El `LEEME.md` de esa carpeta tiene el diagnóstico completo y los comandos por si se decide
-  aplicar
+- El `LEEME.md` de `mejoras-pendientes/` tiene el diagnóstico completo y los comandos por
+  si se decide aplicar
 
 ### Cómo aplicarla, si se decide
 
@@ -296,8 +296,7 @@ Son 3 archivos en sus mismas rutas. Nada más cambia: los otros 2 del paquete
 
 - **Desarrollo — Eduardo Romero.** El código de `en-servidor/`, el hook del 10417, las
   herramientas, la suite de pruebas y este repositorio.
-- **Despliegue — David Báez.** Es el único con acceso al servidor: sube los archivos y
-  corre `php clear_cache.php`. Nada llega a m6dev sin él.
+- **Despliegue — David Báez.** Es el único con acceso al servidor: sube los archivos. Nada llega a m6dev sin él.
 - **Datos y definiciones — Negocio.** El diccionario, las reglas y las sedes.
 
 ### Credenciales
@@ -333,7 +332,6 @@ elegibilidad, las 5 sedes de prueba, las 189 combinaciones y las rutas del servi
 - **No se toca `application/`** (core de EspoCRM). Todo va en `custom/`.
 - **Ninguna credencial se escribe en un archivo versionado.** Van por variable de
   entorno.
-- **David Báez es el único con acceso al servidor**: sube archivos y corre
-  `php clear_cache.php`. El resto trabaja contra la API.
+- **David Báez es el único con acceso al servidor**: sube archivos, el resto trabaja contra la API.
 - Nada se borra ni altera sin autorización explícita.
 - **Las dudas de negocio van a Negocio**; las de despliegue, a **David**.

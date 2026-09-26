@@ -6,7 +6,7 @@ Este archivo entrega contexto a Claude Code (claude.ai/code) para trabajar en es
 
 Este repositorio no es una instalación de EspoCRM: es una copia de trabajo del código custom, los datos y las herramientas de tres tickets (10416, 10417, 10420) hechos para la instancia de EspoCRM de Farma eRP en `m6dev.farma-erp.cl` (EspoCRM 8.4.2, PHP 8.1.31). El repo refleja exactamente lo que corre en ese servidor: no hay paso de build, no hay instalación del framework, y `application/` (core de EspoCRM) nunca se toca. Todo vive bajo `custom/`.
 
-El desarrollo es de Eduardo Romero. David Báez es el único con acceso al servidor (sube archivos y corre `php clear_cache.php`); nadie más toca el servidor directamente.
+El desarrollo es de Eduardo Romero. David Báez es el único con acceso al servidor y sube archivos; nadie más toca el servidor directamente.
 
 ## Estructura del repositorio
 
@@ -15,7 +15,7 @@ El desarrollo es de Eduardo Romero. David Báez es el único con acceso al servi
 - `datos/`: snapshots JSON de lo que está cargado en m6dev (diccionario, reglas, permisos, sedes). La lógica del filtro no sirve de nada sin estos datos, aunque el código esté bien subido.
 - `pruebas/`: suite de pruebas que corre el módulo real del lado cliente contra la API viva de m6dev.
 - `herramientas/`: scripts en Python que cargan datos de referencia y crean pacientes de prueba por API.
-- `mejoras-pendientes/`: una corrección escrita pero **NO desplegada** (modal de sede del 10416), ya en sus rutas reales del servidor, con su propio `LEEME.md` con el diagnóstico.
+- `mejoras-pendientes/`: una corrección escrita pero **NO desplegada** (modal de sede del 10416), con su propio `LEEME.md` con el diagnóstico y las rutas de destino.
 - `requerimientos/`, `reportes/`, `docs/`, `logs/`: carpetas de trabajo actualmente vacías (no son entregables, ver "Reglas" más abajo).
 
 ## Arquitectura: los tickets 10416/10417/10420
@@ -58,7 +58,7 @@ El patrón del arnés de pruebas, como referencia (sin invocarlo): `pruebas/prue
 
 - Nunca modificar `application/` (core de EspoCRM): todo cambio va en `custom/`.
 - Ninguna credencial se escribe jamás en un archivo versionado; solo salen de variables de entorno.
-- Solo David Báez sube archivos al servidor / corre `php clear_cache.php`; nadie más tiene acceso al servidor.
+- Solo David Báez sube archivos al servidor; nadie más tiene acceso.
 - Nada se borra ni se altera sin autorización explícita.
 - Las dudas de negocio van a Negocio; las de despliegue, a David.
 - Este repo deliberadamente no guarda informes/bitácoras/notas: solo lo que corre, los datos cargados y las pruebas (según sección 1 del README).
