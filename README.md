@@ -294,14 +294,11 @@ Son 3 archivos en sus mismas rutas. Nada más cambia: los otros 2 del paquete
 
 ### Autoría
 
-Todo el desarrollo de este proyecto es de **Eduardo Romero**: el código de
-`en-servidor/`, el hook del 10417, las herramientas de `herramientas/`, la suite de
-pruebas y este repositorio.
-
-- **David Báez** no desarrolló este trabajo: sube los archivos al servidor y corre
-  `php clear_cache.php`.
-- **Negocio** aportó las definiciones y los datos de referencia (diccionario, reglas,
-  sedes).
+- **Desarrollo — Eduardo Romero.** El código de `en-servidor/`, el hook del 10417, las
+  herramientas, la suite de pruebas y este repositorio.
+- **Despliegue — David Báez.** Es el único con acceso al servidor: sube los archivos y
+  corre `php clear_cache.php`. Nada llega a m6dev sin él.
+- **Datos y definiciones — Negocio.** El diccionario, las reglas y las sedes.
 
 ### Credenciales
 

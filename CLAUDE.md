@@ -6,7 +6,7 @@ Este archivo entrega contexto a Claude Code (claude.ai/code) para trabajar en es
 
 Este repositorio no es una instalación de EspoCRM: es una copia de trabajo del código custom, los datos y las herramientas de tres tickets (10416, 10417, 10420) hechos para la instancia de EspoCRM de Farma eRP en `m6dev.farma-erp.cl` (EspoCRM 8.4.2, PHP 8.1.31). El repo refleja exactamente lo que corre en ese servidor: no hay paso de build, no hay instalación del framework, y `application/` (core de EspoCRM) nunca se toca. Todo vive bajo `custom/`.
 
-Toda la autoría de este repositorio es de Eduardo Romero. David Báez es el único con acceso al servidor (sube archivos y corre `php clear_cache.php`); nadie más toca el servidor directamente.
+El desarrollo es de Eduardo Romero. David Báez es el único con acceso al servidor (sube archivos y corre `php clear_cache.php`); nadie más toca el servidor directamente.
 
 ## Estructura del repositorio
 
